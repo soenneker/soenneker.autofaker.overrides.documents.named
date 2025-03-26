@@ -7,7 +7,7 @@ namespace Soenneker.AutoFaker.Overrides.Documents.Named;
 /// <summary>
 /// An AutoFaker (AutoBogus) override for the NamedDocument object
 /// </summary>
-public class NamedDocumentOverrideOverride : AutoFakerOverride<NamedDocument>
+public class NamedDocumentOverride : AutoFakerOverride<NamedDocument>
 {
     public override bool CanOverride(AutoFakerContext context)
     {
