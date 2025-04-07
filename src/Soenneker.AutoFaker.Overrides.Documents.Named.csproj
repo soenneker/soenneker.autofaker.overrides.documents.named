@@ -43,6 +43,6 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.Documents.Named" Version="3.0.2444" />
-        <PackageReference Include="Soenneker.Utils.AutoBogus" Version="3.0.741" />
+        <PackageReference Include="Soenneker.Utils.AutoBogus" Version="3.0.743" />
     </ItemGroup>
 </Project>
