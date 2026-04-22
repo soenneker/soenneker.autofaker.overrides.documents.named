@@ -1,11 +1,10 @@
-﻿using Soenneker.Tests.Unit;
-using Xunit;
+using Soenneker.Tests.Unit;
 
 namespace Soenneker.AutoFaker.Overrides.Documents.Named.Tests;
 
 public sealed class NamedDocumentOverrideTests : UnitTest
 {
-    [Fact]
+    [Test]
     public void Default()
     {
 
