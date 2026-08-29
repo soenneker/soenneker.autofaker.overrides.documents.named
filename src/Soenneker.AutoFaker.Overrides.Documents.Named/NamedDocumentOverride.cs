@@ -16,7 +16,7 @@ public class NamedDocumentOverride : AutoFakerOverride<NamedDocument>
     /// <returns>A value indicating whether the operation succeeded.</returns>
     public override bool CanOverride(AutoFakerContext context)
     {
-        return context.GenerateType.IsSubclassOf(typeof(NamedDocument));
+        return typeof(NamedDocument).IsAssignableFrom(context.GenerateType);
     }
 
     /// <summary>

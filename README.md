@@ -5,20 +5,24 @@
 
 # Soenneker.AutoFaker.Overrides.Documents.Named
 
-An AutoFaker (AutoBogus) override for the NamedDocument object.
+An AutoFaker override that populates identity fields on `NamedDocument` models.
 
-## Install
+## Installation
 
 ```bash
 dotnet add package Soenneker.AutoFaker.Overrides.Documents.Named
 ```
 
-## What you get
+## Usage
 
-- `NamedDocumentOverride` — An AutoFaker (AutoBogus) override for the NamedDocument object.
+```csharp
+using Soenneker.AutoFaker.Overrides.Documents.Named;
+using Soenneker.Utils.AutoBogus;
 
-## API at a glance
+var autoFaker = new AutoFaker();
+autoFaker.Config.Overrides = [new NamedDocumentOverride()];
 
-| API | What it does | Result / important behavior |
-| --- | --- | --- |
-| `NamedDocumentOverride.CanOverride(context)` | Executes the can override operation. | A value indicating whether the operation succeeded. |
+ProductDocument document = autoFaker.Generate<ProductDocument>();
+```
+
+The override applies to `NamedDocument` and derived types. It assigns a commerce product name to `Name` and a GUID string to `Id`. Register a more specific override later when a derived document needs different identity data.
